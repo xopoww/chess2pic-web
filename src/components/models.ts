@@ -7,4 +7,4 @@ export interface NotationConfig {
   target: string;
   // Default notation value
   default: string;
-};
+}

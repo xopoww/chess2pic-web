@@ -11,8 +11,8 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'IndexPage',
   components: { MainComponent },
-  setup () {
-    return
-  }
+  setup() {
+    return;
+  },
 });
 </script>

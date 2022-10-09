@@ -18,15 +18,11 @@
           :key="notation.name"
           class="q-pt-md"
           :name="notation.id"
-        >  
-          <NotationTabPanel
-            :cfg="notation"
-          />
+        >
+          <NotationTabPanel :cfg="notation" />
         </q-tab-panel>
       </q-tab-panels>
     </q-card-section>
-
-
   </q-card>
 </template>
 
@@ -42,8 +38,18 @@ export default defineComponent({
   },
   setup() {
     const notations: NotationConfig[] = [
-      { name: 'FEN', id: 'fen', target: 'png', default: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR' },
-      { name: 'PGN', id: 'pgn', target: 'gif', default: '1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6' },
+      {
+        name: 'FEN',
+        id: 'fen',
+        target: 'png',
+        default: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR',
+      },
+      {
+        name: 'PGN',
+        id: 'pgn',
+        target: 'gif',
+        default: '1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nc6 4. Nxc6 dxc6',
+      },
     ];
     const tab = ref(notations[0].id);
     return {
