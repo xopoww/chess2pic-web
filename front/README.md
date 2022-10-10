@@ -1,43 +1,29 @@
-# chess2pic (chess2pic-web)
+# chess2pic-web (front end)
+Quasar SPA for chess2pic web app.
 
-Chess visualization tool
 
-## Install the dependencies
+## Prerequisites
 
+ - Node JS v16+
+
+Install node dependencies with
 ```bash
 yarn
 # or
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-
-```bash
-quasar dev
-```
-
-### Lint the files
-
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-### Format the files
-
-```bash
-yarn format
-# or
-npm run format
-```
-
-### Build the app for production
+## Building
 
 ```bash
 quasar build
 ```
 
-### Customize the configuration
+## Running
 
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+It is possible to run Quasar dev server with
+```bash
+quasar dev
+```
+
+But the preferred way is to run the [production server](../back/README.md).
