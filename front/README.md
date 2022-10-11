@@ -16,14 +16,14 @@ npm install
 ## Building
 
 ```bash
-quasar build
+npm run build
 ```
 
 ## Running
 
 It is possible to run Quasar dev server with
 ```bash
-quasar dev
+npm run dev
 ```
 
 But the preferred way is to run the [production server](../back/README.md).
