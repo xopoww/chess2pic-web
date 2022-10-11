@@ -7,10 +7,11 @@ app.use('/', express.static(path.join(__dirname, "..", "front", "dist", "spa")))
 
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
+const API_PORT = process.env["API_PORT"];
 app.use(
   '/api',
   createProxyMiddleware({
-    target: 'http://localhost:65000',
+    target: `http://my-awesome-domain.io:${API_PORT}`,  // TODO: replace with actual domain name
     pathRewrite: {'^/api': ''},
     changeOrigin: true,
   })
