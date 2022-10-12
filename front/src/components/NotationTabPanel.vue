@@ -10,7 +10,7 @@
 
     <q-toggle
       v-model="fromBlack"
-      :label="`Draw from ${fromBlack ? 'black' : 'white'}'s perspective`"
+      :label="`Render from ${fromBlack ? 'black' : 'white'}'s perspective`"
     />
 
     <div class="row justify-center">

@@ -1,10 +1,9 @@
 # syntax=docker/dockerfile:1
 
-FROM alpine/git as clone
+FROM alpine as clone
 
 WORKDIR /repo
-RUN git clone https://github.com/xopoww/chess2pic-web.git .
-
+COPY . /repo/
 
 FROM node:16-alpine as base
 
