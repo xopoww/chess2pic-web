@@ -28,5 +28,8 @@ RUN npm install
 
 EXPOSE 9000
 
+RUN adduser -D myuser
+USER myuser
+
 ENV API_PORT=65000
 CMD [ "npm", "start" ]

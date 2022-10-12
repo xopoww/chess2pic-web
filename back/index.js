@@ -17,7 +17,7 @@ app.use(
   })
 );
 
-const port = 9000;
-app.listen(port, () => {
-    console.log(`HTTP server listening on :${port}`);
+const PORT = process.env["PORT"] || 9000;
+app.listen(PORT, () => {
+    console.log(`HTTP server listening on :${PORT}`);
 })
