@@ -21,7 +21,7 @@ docker pull xopoww/chess2pic-web:latest
 and run them locally
 ```bash
 docker run -d -p 65000:8080 xopoww/chess2pic
-docker run -d -p 9000:9000  xopoww/chess2pic-web
+docker run -d -p 9000:9000 --add-host host-gateway:host-gateway xopoww/chess2pic-web
 ```
 
 After that you can access the app on http://localhost:9000.
