@@ -8,7 +8,7 @@
           round
           color="primary"
           icon="home"
-          href="http://xopoww.me"
+          href="http://xopoww.com"
           size="small"
         />
         <span class="q-mx-xs">|</span>
