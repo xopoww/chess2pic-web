@@ -5,8 +5,14 @@
     >
   </q-toolbar>
 
-  <q-form class="q-mx-md" @submit.prevent="submit">
-    <q-input v-model="notation" type="textarea" label="Notation" filled />
+  <q-form class="q-mx-md" @submit.prevent="submit" spellcheck="false">
+    <q-input
+      v-model="notation"
+      type="textarea"
+      label="Notation"
+      filled
+      autogrow
+    />
 
     <q-toggle
       v-model="fromBlack"

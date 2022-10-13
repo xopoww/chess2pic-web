@@ -1,12 +1,13 @@
 # chess2pic-web (front end)
-Quasar SPA for chess2pic web app.
 
+Quasar SPA for chess2pic web app.
 
 ## Prerequisites
 
- - Node JS v16+
+- Node JS v16+
 
 Install node dependencies with
+
 ```bash
 yarn
 # or
@@ -22,6 +23,7 @@ npm run build
 ## Running
 
 It is possible to run Quasar dev server with
+
 ```bash
 npm run dev
 ```
