@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf" style="background-color: rgb(250, 245, 230)">
-    <q-header class="bg-transparent text-dark center">
+  <q-layout view="hhh Lpr lFf" style="background-color: rgb(250, 245, 230)">
+    <q-header class="bg-transparent text-dark">
       <q-toolbar>
         <q-space />
         <q-btn
