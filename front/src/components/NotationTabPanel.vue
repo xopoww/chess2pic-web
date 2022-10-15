@@ -27,11 +27,26 @@
       </q-btn>
     </div>
 
-    <q-separator class="q-my-md" />
+    <!-- <q-separator class="q-my-md" /> -->
 
     <template v-if="image !== ''">
       <div class="row justify-center">
-        <img :src="`data:image/${cfg.target};base64,${image}`" class="center" />
+        <div class="image-container q-mt-lg">
+          <div>
+            <img :src="`data:image/${cfg.target};base64,${image}`" class="center" />
+          </div>
+          
+          <div class="row">
+            <q-space/>
+            <q-btn
+              flat no-caps
+              color="primary"
+              icon="mdi-download"
+              label="download"
+              @click="save"
+            />
+          </div>
+        </div>
       </div>
     </template>
 
@@ -45,7 +60,7 @@
 import { defineComponent, PropType, ref } from 'vue';
 import { NotationConfig } from './models';
 import { api } from 'src/boot/axios';
-import { useQuasar } from 'quasar';
+import { useQuasar, exportFile } from 'quasar';
 
 export default defineComponent({
   name: 'NotationTabPanel',
@@ -99,7 +114,13 @@ export default defineComponent({
         });
     }
 
-    return { notation, fromBlack, submit, submitting, image, error };
+    function save() {
+      exportFile(`${props.cfg.name}.${props.cfg.target}`, Uint8Array.from(atob(image.value), c => c.charCodeAt(0)), {
+        mimeType: `image/${props.cfg.target}`,
+      })
+    }
+
+    return { notation, fromBlack, submit, submitting, image, error, save};
   },
 });
 </script>
